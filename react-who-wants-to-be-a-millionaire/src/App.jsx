@@ -77,6 +77,50 @@ function App() {
         },
       ],
     },
+    {
+      id: 4,
+      question: 'Rolex is a company that specializes in what type of product?',
+      answers: [
+        {
+          text: 'Phone',
+          correct: false,
+        },
+        {
+          text: 'Watches',
+          correct: true,
+        },
+        {
+          text: 'Food',
+          correct: false,
+        },
+        {
+          text: 'Cosmetic',
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 5,
+      question: 'Rolex is a company that specializes in what type of product?',
+      answers: [
+        {
+          text: 'Phone',
+          correct: false,
+        },
+        {
+          text: 'Watches',
+          correct: true,
+        },
+        {
+          text: 'Food',
+          correct: false,
+        },
+        {
+          text: 'Cosmetic',
+          correct: false,
+        },
+      ],
+    }
   ];
 
   const moneyPyramid = useMemo(
@@ -102,6 +146,7 @@ function App() {
   );
 
   useEffect(() => {
+    console.log("useEffect");
     // Show the previous question's amount unless user is on the first question
     questionNumber > 1 &&
       setEarned(moneyPyramid.find(m => m.id === questionNumber - 1).amount);
@@ -109,6 +154,7 @@ function App() {
 
   return (
     <div className='App'>
+      {console.log("render"+username)}
       {username ? (
         <>
           <div className='main'>
